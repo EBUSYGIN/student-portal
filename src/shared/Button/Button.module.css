@@ -1,0 +1,29 @@
+.button {
+  text-align: center;
+  font-weight: 700;
+}
+
+.default {
+  background-color: var(--medium-blue);
+  color: var(--white);
+}
+
+.ghost {
+  background-color: var(--white);
+  color: var(--medium-blue);
+  border: 1px solid var(--medium-blue);
+}
+
+.l {
+  font-size: var(--font-text-big);
+  width: 100%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+  border-radius: 10px;
+}
+
+.s {
+  padding: 8px 15px;
+  border-radius: 5px;
+}

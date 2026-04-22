@@ -15,6 +15,17 @@ const eslintConfig = defineConfig([
         projectService: true,
         tsconfigRootDir: import.meta.dirname,
       },
+      settings: {
+        'import/resolver': {
+          typescript: {
+            alwaysTryTypes: true,
+            project: './tsconfig.json',
+          },
+          node: {
+            extensions: ['.js', '.jsx', '.ts', '.tsx', '.svg', '.png', '.jpg'],
+          },
+        },
+      },
     },
     rules: {
       'import/no-unresolved': 'error',

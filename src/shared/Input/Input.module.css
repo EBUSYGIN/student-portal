@@ -1,0 +1,40 @@
+.inputBox {
+  width: 100%;
+  padding-bottom: 25px;
+}
+
+.input {
+  width: 100%;
+  border-radius: 10px;
+  border: 2px solid var(--light-blue);
+
+  color: var(--black);
+
+  padding: 14px;
+  padding-left: 20px;
+}
+
+.label {
+  font-weight: 700;
+  font-size: var(--font-text-main);
+}
+
+.input::placeholder {
+  color: var(--dark-gray);
+}
+
+.inputWrapper {
+  position: relative;
+  width: 100%;
+}
+
+.icon {
+  position: absolute;
+  left: 28px;
+  top: 14px;
+}
+
+.error {
+  color: var(--red);
+  position: absolute;
+}
