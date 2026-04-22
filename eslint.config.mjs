@@ -1,79 +1,46 @@
-import { fileURLToPath } from 'url';
-import { dirname } from 'path';
+import { defineConfig, globalIgnores } from 'eslint/config';
+import nextVitals from 'eslint-config-next/core-web-vitals';
+import nextTs from 'eslint-config-next/typescript';
 
-import { FlatCompat } from '@eslint/eslintrc';
-import typescriptEs from '@typescript-eslint/parser';
-import reactRefresh from 'eslint-plugin-react-refresh';
-import importEs from 'eslint-plugin-import';
+const eslintConfig = defineConfig([
+  ...nextVitals,
+  ...nextTs,
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
+  globalIgnores(['.next/**', 'out/**', 'build/**', 'next-env.d.ts']),
 
-const compat = new FlatCompat({
-  baseDirectory: __dirname,
-  recommendedConfig: true,
-});
-
-const eslintConfig = [
-  ...compat.extends(
-    'next/core-web-vitals',
-    'next/typescript',
-    'airbnb-base',
-    'plugin:@typescript-eslint/recommended',
-    'plugin:react-hooks/recommended',
-    'prettier',
-  ),
   {
-    ignores: ['dist', '.eslintrc.cjs'],
+    files: ['**/*.{ts,tsx}'],
     languageOptions: {
-      parser: typescriptEs,
-    },
-    plugins: {
-      'react-refresh': reactRefresh,
-      import: importEs,
-    },
-    settings: {
-      'import/parsers': {
-        '@typescript-eslint/parser': ['.ts', '.tsx'],
-      },
-      'import/resolver': {
-        node: true,
-        typescript: {
-          project: '.',
-        },
+      parserOptions: {
+        projectService: true,
+        tsconfigRootDir: import.meta.dirname,
       },
     },
     rules: {
-      'import/no-extraneous-dependencies': ['off'],
       'import/no-unresolved': 'error',
-      'import/prefer-default-export': 'off',
-      'no-param-reassign': 'warn',
-      'prefer-promise-reject-errors': 'warn',
-      'import/extensions': 'off',
-      'import/order': [
-        'error',
+
+      '@typescript-eslint/no-unused-vars': [
+        'warn',
         {
-          groups: [
-            'builtin',
-            'external',
-            'internal',
-            'parent',
-            'sibling',
-            'index',
-            'object',
-            'type',
-          ],
-          'newlines-between': 'always',
+          argsIgnorePattern: '^_',
+          varsIgnorePattern: '^_',
+          caughtErrorsIgnorePattern: '^_',
         },
       ],
-      'react-refresh/only-export-components': [
-        'warn',
-        { allowConstantExport: true },
-      ],
-      'no-shadow': ['off'],
-      'arrow-body-style': ['off'],
+      '@typescript-eslint/no-explicit-any': 'warn',
+      '@typescript-eslint/no-floating-promises': 'error',
+      '@typescript-eslint/no-misused-promises': 'error',
+      '@typescript-eslint/await-thenable': 'error',
+
+      'no-console': ['warn', { allow: ['warn', 'error'] }],
+      'no-debugger': 'error',
+      'no-param-reassign': ['error', { props: false }],
+      'prefer-const': 'error',
+      'no-var': 'error',
+      eqeqeq: ['error', 'always'],
+      curly: ['error', 'all'],
     },
   },
-];
+]);
 
 export default eslintConfig;

@@ -1,0 +1,24 @@
+:root {
+  /*colors*/
+  --black: #000;
+  --white: #fff;
+  --blue: #1652a8;
+  --medium-blue: #296fe5;
+  --light-blue: #b1cef8;
+
+  --beige: #f5eee4;
+  --crimson: #3f081b;
+  --light-green: #bef4d1;
+  --dark-green: #285237;
+  --yellow: #fbecbb;
+  --dark-yellow: #4d421e;
+  --red: #ff9f8e;
+  --dark-gray: #666;
+
+  /*font-sizes*/
+  --font-h1: 36px;
+  --font-h2: 32px;
+  --font-text-big: 28px;
+  --font-text-main: 20px;
+  --font-text-small: 15px;
+}
