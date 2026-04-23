@@ -1,0 +1,11 @@
+.header {
+  padding: 18px 155px;
+
+  display: flex;
+  justify-content: space-between;
+
+  background-color: var(--medium-blue);
+  color: var(--white);
+
+  margin-bottom: 50px;
+}

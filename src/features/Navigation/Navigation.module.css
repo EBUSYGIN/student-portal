@@ -1,0 +1,28 @@
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+
+  border-radius: 25px;
+  border: 2px solid var(--background-blue);
+
+  margin-bottom: 30px;
+}
+
+.link {
+  color: var(--medium-blue);
+  font-size: var(--font-text-big);
+  padding: 10px 60px;
+
+  border-radius: 20px;
+
+  text-align: center;
+  width: 100%;
+  font-weight: 700;
+}
+
+.active {
+  background-color: var(--background-blue);
+  color: var(--white);
+}
