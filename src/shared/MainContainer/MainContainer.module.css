@@ -1,0 +1,12 @@
+.mainContainer {
+  padding: 30px 25px;
+  background-color: var(--background-blue);
+  border: 2px solid var(--light-blue);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 25px;
+}
