@@ -1,1 +1,1 @@
-export { Navigation } from './Navigation/Navigation';
+export { UserNavigationConfig } from './config/navigation.config';

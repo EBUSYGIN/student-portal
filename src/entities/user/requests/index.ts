@@ -1,6 +1,6 @@
 import axiosInstance from '@/assets/lib/axios/axiosInstance';
-import { IUserResponse } from '../types';
-import { UserClientEndpoints } from '../endpoints';
+import { IUserResponse } from '../model';
+import { UserClientEndpoints } from '../api';
 
 const getUserData = async () => {
   try {

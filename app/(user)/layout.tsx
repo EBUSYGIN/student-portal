@@ -1,7 +1,6 @@
-import { UserNavigationConfig } from '@/assets/config/navigation/navigation.config';
-import { Navigation } from '@/features/User';
+import { UserNavigationConfig } from '@/features/User';
 
-import { MainContainer } from '@/shared';
+import { MainContainer, Navigation } from '@/shared';
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (

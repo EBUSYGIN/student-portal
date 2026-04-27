@@ -3,7 +3,7 @@
 import { useAnyInfo } from '@/assets/lib/hooks/useAnyInfo';
 
 import { userRequests } from '../../requests';
-import { IUserResponse } from '../../types';
+import { IUserResponse } from '../../model';
 import { Card, Title, InfoItem, Loader } from '@/shared';
 
 import styles from './InfoBlock.module.css';

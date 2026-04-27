@@ -7,3 +7,4 @@ export { Card } from './Card/Card';
 export { Title } from './Title/Title';
 export { InfoItem } from './InfoItem/InfoItem';
 export { Loader } from './Loader/Loader';
+export { Navigation } from './Navigation/Navigation';
