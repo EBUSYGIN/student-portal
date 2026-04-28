@@ -22,7 +22,7 @@ export function Button({
       className={cn(styles.button, styles[appearance], styles[size], className)}
       {...props}
     >
-      {children} {IconComponent}
+      {children} {IconComponent && <IconComponent />}
     </button>
   );
 }
