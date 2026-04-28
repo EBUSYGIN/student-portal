@@ -1,9 +1,8 @@
 import { Card, Title } from '@/shared';
+import { QueryProvider } from '@/app/Providers/QueryProvider';
 
 import styles from './page.module.css';
-import { QueryClientProvider } from '@tanstack/react-query';
-import { queryClient } from '@/assets/lib/query-client';
-import { InfoBlock } from '@/entities/user/ui';
+import { UserInfo } from '@/widgets';
 
 export default function UserPage() {
   return (
@@ -13,9 +12,9 @@ export default function UserPage() {
           Профиль
         </Title>
       </Card>
-      <QueryClientProvider client={queryClient}>
-        <InfoBlock />
-      </QueryClientProvider>
+      <QueryProvider>
+        <UserInfo />
+      </QueryProvider>
     </div>
   );
 }

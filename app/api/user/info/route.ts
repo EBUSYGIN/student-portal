@@ -20,6 +20,10 @@ export async function GET() {
         parent_name: 'Иванов Иван Иванович',
         email: 'mail@mail.ru',
       },
+      {
+        parent_name: 'Петров Петр Петрович',
+        email: 'mail@mail.ru',
+      },
     ],
   };
 

@@ -1,6 +1,11 @@
 .button {
   text-align: center;
   font-weight: 700;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
 }
 
 .default {
@@ -8,10 +13,20 @@
   color: var(--white);
 }
 
+.default:hover {
+  background-color: var(--blue);
+}
+
 .ghost {
   background-color: var(--white);
   color: var(--medium-blue);
   border: 1px solid var(--medium-blue);
+}
+
+.ghost:hover {
+  background-color: var(--light-blue);
+  border-color: var(--blue);
+  color: var(--blue);
 }
 
 .l {

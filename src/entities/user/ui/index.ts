@@ -1,1 +1,2 @@
-export { InfoBlock } from './InfoBlock/InfoBlock';
+export { PersonalInfoBlock } from './PersonalInfoBlock/PersonalInfoBlock';
+export { ParentsBlock } from './ParentsBlock/ParentsBlock';

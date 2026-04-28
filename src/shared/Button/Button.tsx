@@ -8,7 +8,7 @@ import { IButtonTypes } from './Button.types';
 import styles from './Button.module.css';
 
 export function Button({
-  appearance,
+  appearance = 'default',
   size,
   children,
   icon,
