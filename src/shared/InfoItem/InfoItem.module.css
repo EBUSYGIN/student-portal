@@ -1,0 +1,22 @@
+.info {
+  width: 100%;
+  padding: 5px 10px;
+
+  border-bottom: 2px solid var(--light-blue);
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: center;
+  gap: 12px;
+}
+
+.label {
+  font-weight: 500;
+  font-size: var(--font-text-main);
+  color: var(--dark-gray);
+  min-width: 250px;
+}
+
+.value {
+  font-weight: 600;
+  font-size: var(--font-text-main);
+}

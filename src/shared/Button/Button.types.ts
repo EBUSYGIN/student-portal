@@ -5,7 +5,7 @@ export interface IButtonTypes extends DetailedHTMLProps<
   ButtonHTMLAttributes<HTMLButtonElement>,
   HTMLButtonElement
 > {
-  appearance: 'default' | 'ghost';
+  appearance?: 'default' | 'ghost';
   size: 'l' | 's';
   icon?: IconType;
 }

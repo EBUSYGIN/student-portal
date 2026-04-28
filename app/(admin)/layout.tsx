@@ -1,11 +1,11 @@
-import { AdminNavigationConfig } from '@/assets/config/navigation/navigation.config';
-import { Navigation } from '@/features';
+import { AdminNavigationConfig } from '@/features/Admin';
+import { MainContainer, Navigation } from '@/shared';
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div>
       <Navigation navigationItems={AdminNavigationConfig} />
-      {children}
+      <MainContainer>{children}</MainContainer>
     </div>
   );
 }

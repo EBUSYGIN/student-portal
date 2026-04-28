@@ -1,0 +1,16 @@
+.title {
+  color: var(--black);
+  font-weight: 700;
+}
+
+.l {
+  font-size: var(--font-h1);
+}
+
+.m {
+  font-size: var(--font-h2);
+}
+
+.s {
+  font-size: var(--font-text-big);
+}
