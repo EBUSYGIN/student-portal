@@ -4,5 +4,5 @@ export interface IStatusTagTypes extends DetailedHTMLProps<
   HTMLAttributes<HTMLDivElement>,
   HTMLDivElement
 > {
-  status: 'success' | 'error' | 'warning';
+  status: 'success' | 'error' | 'warning' | 'info';
 }
