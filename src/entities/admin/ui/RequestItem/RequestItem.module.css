@@ -9,5 +9,75 @@
 }
 
 .disclosurePanel {
-  display: block ;
+  width: calc(100% + 30px);
+  grid-column: 1 / -1;
+  justify-self: center;
+  display: grid;
+  grid-template-rows: 1fr;
+  margin: 8px 0 -15px;
+  text-align: left;
+  overflow: hidden;
+  opacity: 1;
+  transition:
+    grid-template-rows 220ms linear,
+    opacity 220ms linear;
+}
+
+.disclosureContent {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(220px, 1fr);
+  gap: 0 24px;
+  padding: 0 90px;
+  border-top: 2px solid var(--light-blue);
+  background: linear-gradient(
+    to right,
+    var(--light-blue) 0 90px,
+    transparent 90px calc(100% - 90px),
+    var(--light-blue) calc(100% - 90px) 100%
+  );
+  min-height: 0;
+}
+
+.disclosurePanel[data-closed] {
+  grid-template-rows: 0fr;
+  opacity: 0;
+}
+
+.detailColumn {
+  display: grid;
+  gap: 0;
+  min-width: 0;
+  width: 100%;
+}
+
+.detailRow {
+  display: grid;
+  grid-template-columns: 170px minmax(0, 1fr);
+  align-items: baseline;
+  gap: 8px;
+  min-width: 0;
+  width: 100%;
+  padding: 8px 0;
+}
+
+.detailRow:first-child {
+  border-bottom: 1px solid var(--light-blue);
+}
+
+.detailLabel {
+  font-weight: 500;
+  font-size: var(--font-text-main);
+  color: var(--dark-gray);
+  text-align: left;
+  white-space: nowrap;
+}
+
+.detailValue {
+  font-weight: 600;
+  font-size: var(--font-text-main);
+  color: var(--black);
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
