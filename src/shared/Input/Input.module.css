@@ -1,17 +1,26 @@
 .inputBox {
   width: 100%;
   padding-bottom: 25px;
+  max-width: 700px;
+}
+
+.inputBoxSearch {
+  padding-bottom: 0;
 }
 
 .input {
   width: 100%;
   border-radius: 10px;
-  border: 2px solid var(--light-blue);
+  border: 2px solid var(--goluboy-dlya-obvodok);
 
-  color: var(--black);
+  color: var(--chernyy);
 
   padding: 14px;
   padding-left: 20px;
+}
+
+.inputWithIcon {
+  padding-left: 56px;
 }
 
 .label {
@@ -20,7 +29,7 @@
 }
 
 .input::placeholder {
-  color: var(--dark-gray);
+  color: var(--temno-seryy);
 }
 
 .inputWrapper {
@@ -31,10 +40,12 @@
 .icon {
   position: absolute;
   left: 28px;
-  top: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
 }
 
 .error {
-  color: var(--red);
+  color: var(--krasnyy);
   position: absolute;
 }

@@ -4,7 +4,7 @@
 
   font-weight: 600;
   font-size: var(--font-text-main);
-  color: var(--black);
+  color: var(--chernyy);
   text-align: center;
 }
 
@@ -28,12 +28,12 @@
   grid-template-columns: minmax(0, 1.5fr) minmax(220px, 1fr);
   gap: 0 24px;
   padding: 0 90px;
-  border-top: 2px solid var(--light-blue);
+  border-top: 2px solid var(--goluboy-dlya-obvodok);
   background: linear-gradient(
     to right,
-    var(--light-blue) 0 90px,
+    var(--goluboy-dlya-obvodok) 0 90px,
     transparent 90px calc(100% - 90px),
-    var(--light-blue) calc(100% - 90px) 100%
+    var(--goluboy-dlya-obvodok) calc(100% - 90px) 100%
   );
   min-height: 0;
 }
@@ -61,13 +61,13 @@
 }
 
 .detailRow:first-child {
-  border-bottom: 1px solid var(--light-blue);
+  border-bottom: 1px solid var(--goluboy-dlya-obvodok);
 }
 
 .detailLabel {
   font-weight: 500;
   font-size: var(--font-text-main);
-  color: var(--dark-gray);
+  color: var(--temno-seryy);
   text-align: left;
   white-space: nowrap;
 }
@@ -75,7 +75,7 @@
 .detailValue {
   font-weight: 600;
   font-size: var(--font-text-main);
-  color: var(--black);
+  color: var(--chernyy);
   min-width: 0;
   white-space: nowrap;
   overflow: hidden;

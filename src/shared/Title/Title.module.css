@@ -1,6 +1,8 @@
 .title {
-  color: var(--black);
+  color: var(--chernyy);
   font-weight: 700;
+
+  margin-bottom: 10px;
 }
 
 .l {

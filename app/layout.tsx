@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import { Nunito_Sans } from 'next/font/google';
 import '@app/styles/style.css';
-import { Header } from '@/widgets';
 
 import styles from './layout.module.css';
 
@@ -27,7 +26,6 @@ export default function RootLayout({
   return (
     <html lang='ru' className={`${nunitoSans.className}`}>
       <body>
-        <Header />
         <div className={styles.container}>{children}</div>
       </body>
     </html>

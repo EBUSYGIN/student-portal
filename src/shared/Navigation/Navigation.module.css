@@ -5,13 +5,13 @@
   padding: 10px;
 
   border-radius: 25px;
-  border: 2px solid var(--background-blue);
+  border: 2px solid var(--siniy-dlya-fona);
 
   margin-bottom: 30px;
 }
 
 .link {
-  color: var(--medium-blue);
+  color: var(--siniy-osnovnoy);
   font-size: var(--font-text-big);
   padding: 10px 60px;
 
@@ -23,6 +23,6 @@
 }
 
 .active {
-  background-color: var(--background-blue);
-  color: var(--white);
+  background-color: var(--siniy-dlya-fona);
+  color: var(--belyy);
 }

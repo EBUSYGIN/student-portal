@@ -4,7 +4,7 @@
 
   display: flex;
   justify-content: space-between;
-  border-bottom: 2px solid var(--light-blue);
+  border-bottom: 2px solid var(--goluboy-dlya-obvodok);
   margin-bottom: 10px;
 }
 
@@ -17,11 +17,11 @@
 .name {
   font-size: var(--font-text-main);
   font-weight: 600;
-  color: var(--black);
+  color: var(--chernyy);
 }
 
 .date {
   font-weight: 700;
   font-size: 16px;
-  color: var(--dark-gray);
+  color: var(--temno-seryy);
 }

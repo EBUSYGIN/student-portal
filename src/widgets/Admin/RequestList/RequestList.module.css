@@ -7,7 +7,7 @@
   column-gap: 12px;
   align-items: center;
 
-  border: 2px solid var(--light-blue);
+  border: 2px solid var(--goluboy-dlya-obvodok);
   border-radius: 25px;
   overflow: hidden;
 }
@@ -17,10 +17,10 @@
   grid-template-columns: subgrid;
   grid-column: 1 / -1;
   padding: 15px;
-  border-bottom: 2px solid var(--light-blue);
+  border-bottom: 2px solid var(--goluboy-dlya-obvodok);
 
   font-size: 20px;
-  color: var(--black);
+  color: var(--chernyy);
   text-align: center;
 }
 
@@ -28,7 +28,7 @@
   width: 100%;
   font-weight: 700;
   font-size: var(--font-text-main);
-  background-color: var(--light-blue);
+  background-color: var(--goluboy-dlya-obvodok);
 }
 
 .requestList > *:last-child {

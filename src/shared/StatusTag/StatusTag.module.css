@@ -7,21 +7,21 @@
 }
 
 .success {
-  background-color: var(--light-green);
-  color: var(--dark-green);
+  background-color: var(--zelenyy);
+  color: var(--temno-zelenyy);
 }
 
 .warning {
-  background-color: var(--yellow);
-  color: var(--dark-yellow);
+  background-color: var(--zheltyy);
+  color: var(--temno-zheltyy);
 }
 
 .error {
-  background-color: var(--red);
-  color: var(--crimson);
+  background-color: var(--krasnyy);
+  color: var(--temno-krasnyy);
 }
 
 .info {
-  background-color: var(--background-blue);
-  color: var(--white);
+  background-color: var(--siniy-dlya-fona);
+  color: var(--belyy);
 }

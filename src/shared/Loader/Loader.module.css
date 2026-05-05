@@ -8,7 +8,7 @@
 .body {
   width: min(100%, 920px);
   background: rgba(255, 255, 255, 0.96);
-  border: 2px solid var(--light-blue);
+  border: 2px solid var(--goluboy-dlya-obvodok);
   border-radius: 28px;
   box-shadow: 0 20px 50px rgba(22, 74, 154, 0.08);
   padding: 32px 28px;
@@ -23,12 +23,12 @@
   height: 56px;
   border-radius: 50%;
   border: 6px solid rgba(177, 206, 248, 0.35);
-  border-top-color: var(--light-blue);
+  border-top-color: var(--goluboy-dlya-obvodok);
   animation: spin 0.9s linear infinite;
 }
 
 .text {
-  color: var(--black);
+  color: var(--chernyy);
   font-weight: 700;
   font-size: var(--font-text-big);
   text-align: center;

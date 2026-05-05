@@ -1,8 +1,8 @@
 .card {
   width: 100%;
   border-radius: 25px;
-  border: 2px solid var(--light-blue);
-  background-color: var(--white);
+  border: 2px solid var(--goluboy-dlya-obvodok);
+  background-color: var(--belyy);
 
   display: flex;
   flex-direction: column;

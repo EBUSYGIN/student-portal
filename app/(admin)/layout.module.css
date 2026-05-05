@@ -1,0 +1,9 @@
+.content {
+  padding: 0 155px 155px 155px;
+}
+
+.content :global(h1),
+.content :global(h2),
+.content :global(h3) {
+  text-align: center;
+}
