@@ -1,0 +1,36 @@
+.requestList {
+  width: 100%;
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1.35fr) minmax(0, 1.15fr) minmax(0, 1fr)
+    minmax(0, 1.65fr) minmax(0, 0.75fr) auto;
+  column-gap: 12px;
+  align-items: center;
+
+  border: 2px solid var(--light-blue);
+  border-radius: 25px;
+  overflow: hidden;
+}
+
+.requestList > * {
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-column: 1 / -1;
+  padding: 15px;
+  border-bottom: 2px solid var(--light-blue);
+
+  font-size: 20px;
+  color: var(--black);
+  text-align: center;
+}
+
+.requestListHeader {
+  width: 100%;
+  font-weight: 700;
+  font-size: var(--font-text-main);
+  background-color: var(--light-blue);
+}
+
+.requestList > *:last-child {
+  border-bottom: none;
+}
