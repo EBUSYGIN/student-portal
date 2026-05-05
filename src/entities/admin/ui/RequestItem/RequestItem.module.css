@@ -1,0 +1,13 @@
+.requestItem {
+  width: 100%;
+  min-width: 0;
+
+  font-weight: 600;
+  font-size: var(--font-text-main);
+  color: var(--black);
+  text-align: center;
+}
+
+.disclosurePanel {
+  display: block ;
+}

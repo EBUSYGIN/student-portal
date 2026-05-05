@@ -2,28 +2,26 @@
   padding: 3px 15px;
   max-width: fit-content;
   border-radius: 5px;
+  font-weight: 600;
+  font-size: 16px;
 }
 
 .success {
   background-color: var(--light-green);
   color: var(--dark-green);
-
-  font-weight: 600;
-  font-size: 16px;
 }
 
 .warning {
   background-color: var(--yellow);
   color: var(--dark-yellow);
-
-  font-weight: 600;
-  font-size: 16px;
 }
 
 .error {
   background-color: var(--red);
   color: var(--crimson);
+}
 
-  font-weight: 600;
-  font-size: 16px;
+.info {
+  background-color: var(--background-blue);
+  color: var(--white);
 }
