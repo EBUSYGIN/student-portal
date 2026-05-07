@@ -42,5 +42,10 @@
   margin-bottom: 10px;
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
+}
+
+.filterActionsRight {
+  display: flex;
+  gap: 20px;
 }

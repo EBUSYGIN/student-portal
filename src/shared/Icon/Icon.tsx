@@ -6,6 +6,7 @@ import Edit from '@assets/images/icons/edit.svg';
 import Trash from '@assets/images/icons/trash.svg';
 import Selectors from '@assets/images/icons/selectors.svg';
 import Search from '@assets/images/icons/search.svg';
+import Plus from '@assets/images/icons/plus.svg';
 
 export const Icon = {
   Calendar,
@@ -16,6 +17,7 @@ export const Icon = {
   Trash,
   Selectors,
   Search,
+  Plus,
 };
 
 export type IconType = keyof typeof Icon;

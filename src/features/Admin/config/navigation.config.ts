@@ -12,7 +12,7 @@ export const AdminHeaderNavigation = [
   { name: 'Заявки', href: '/admin' },
   {
     name: 'Управление',
-    href: '/admin/management',
+    href: '/admin/management/structural-units',
   },
   {
     name: 'Студенты',

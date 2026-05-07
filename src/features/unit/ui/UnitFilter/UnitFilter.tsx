@@ -4,7 +4,14 @@ import { Icon } from '@/shared';
 
 import styles from './UnitFilter.module.css';
 
-export function UnitFilter() {
+export type UnitStatusFilter = 'all' | 'deleted';
+
+interface IUnitFilterProps {
+  value: UnitStatusFilter;
+  onChange: (value: UnitStatusFilter) => void;
+}
+
+export function UnitFilter({ value, onChange }: IUnitFilterProps) {
   return (
     <Menu>
       <MenuButton className={styles.dropDownButton}>
@@ -12,16 +19,24 @@ export function UnitFilter() {
         <Icon.Selectors />
       </MenuButton>
       <MenuItems transition anchor='bottom end' className={styles.menu}>
-        <MenuItem as='button' className={styles.menuButton}>
-          <span className={styles.square} />
+        <MenuItem
+          as='button'
+          className={styles.menuButton}
+          onClick={() => onChange('all')}
+        >
+          <span
+            className={`${styles.square} ${value === 'all' ? styles.squareActive : ''}`}
+          />
           Все
         </MenuItem>
-        <MenuItem as='button' className={styles.menuButton}>
-          <span className={`${styles.square} ${styles.squareActive}`} />
-          Активно
-        </MenuItem>
-        <MenuItem as='button' className={styles.menuButton}>
-          <span className={styles.square} />
+        <MenuItem
+          as='button'
+          className={styles.menuButton}
+          onClick={() => onChange('deleted')}
+        >
+          <span
+            className={`${styles.square} ${value === 'deleted' ? styles.squareActive : ''}`}
+          />
           Удалено
         </MenuItem>
       </MenuItems>
