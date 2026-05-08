@@ -2,6 +2,7 @@ import API_URL from '@/assets/lib/api';
 
 export const UnitClientEndpoints = {
   createStructuralUnit: '/api/admin/organization/structural-unit',
+
   getStructuralUnits: (organizationId: string, deleted?: 'deleted') => {
     const params = new URLSearchParams({ organizationId });
 
@@ -11,6 +12,8 @@ export const UnitClientEndpoints = {
 
     return `/api/admin/organization/structural-unit?${params.toString()}`;
   },
+
+  deleteStructuralUnit: () => `/api/admin/organization/structural-unit/delete`,
 };
 
 export const UnitServerEndpoints = {
@@ -18,4 +21,6 @@ export const UnitServerEndpoints = {
     `${API_URL}/organizations/${organizationId}/structural_units/`,
   getStructuralUnits: (organizationId: string, deleted?: 'deleted') =>
     `${API_URL}/organizations/${organizationId}/structural_units${deleted ? '/deleted' : ''}/`,
+  deleteStructuralUnit: (organizationId: string, id: string) =>
+    `${API_URL}/organizations/${organizationId}/structural_units/${id}/`,
 };

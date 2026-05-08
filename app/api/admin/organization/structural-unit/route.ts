@@ -1,20 +1,17 @@
 import { NextResponse } from 'next/server';
 import { UnitServerEndpoints } from '@/entities/unit/api';
-import { IStructuralUnitCreation } from '@/entities/unit/model';
-
-const parseJsonSafe = async (response: Response) => {
-  try {
-    return await response.json();
-  } catch {
-    return null;
-  }
-};
+import {
+  IStructuralUnit,
+  IStructuralUnitCreation,
+} from '@/entities/unit/model';
+import { safeParse } from '@/assets/lib/http/safeParse';
 
 export async function GET(request: Request) {
   try {
     const { searchParams } = new URL(request.url);
     const organizationId = searchParams.get('organizationId');
-    const deleted = searchParams.get('deleted') === 'deleted' ? 'deleted' : undefined;
+    const deleted =
+      searchParams.get('deleted') === 'deleted' ? 'deleted' : undefined;
 
     if (!organizationId) {
       return NextResponse.json(
@@ -35,20 +32,20 @@ export async function GET(request: Request) {
       },
     );
 
-    const payload = await parseJsonSafe(backendResponse);
+    const payload = await safeParse<IStructuralUnit[] | { message?: string }>(
+      backendResponse,
+    );
 
     if (!backendResponse.ok) {
       return NextResponse.json(
         {
-          message:
-            (payload as { message?: string } | null)?.message ||
-            'Ошибка при получении подразделений.',
+          message: 'Ошибка при получении подразделений.',
         },
         { status: backendResponse.status },
       );
     }
 
-    return NextResponse.json(payload ?? []);
+    return NextResponse.json((payload as IStructuralUnit[] | null) ?? []);
   } catch {
     return NextResponse.json(
       { message: 'Неизвестная ошибка при получении подразделений.' },
@@ -61,12 +58,13 @@ export async function POST(request: Request) {
   try {
     const payload = (await request.json()) as IStructuralUnitCreation;
 
-    if (!payload) {
+    if (!payload?.organization) {
       return NextResponse.json(
         {
-          message: 'Не задано тело запроса.',
+          message:
+            'Не переданы обязательные данные для создания подразделения.',
         },
-        { status: 500 },
+        { status: 400 },
       );
     }
 
@@ -83,20 +81,7 @@ export async function POST(request: Request) {
       },
     );
 
-    if (!backendResponse.ok) {
-      const errorPayload = await parseJsonSafe(backendResponse);
-
-      return NextResponse.json(
-        {
-          message:
-            (errorPayload as { message?: string } | null)?.message ||
-            'Ошибка при создании подразделения.',
-        },
-        { status: backendResponse.status },
-      );
-    }
-
-    const responsePayload = await parseJsonSafe(backendResponse);
+    const responsePayload = await safeParse<IStructuralUnit>(backendResponse);
 
     return NextResponse.json(responsePayload ?? { success: true }, {
       status: 201,

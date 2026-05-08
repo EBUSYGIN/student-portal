@@ -21,7 +21,17 @@ const getStructuralUnits = async (
   return response.data;
 };
 
+const deleteStructuralUnit = async (unit: IStructuralUnit) => {
+  await axiosInstance.delete(UnitClientEndpoints.deleteStructuralUnit(), {
+    data: {
+      organizationId: unit.organization,
+      id: unit.id,
+    },
+  });
+};
+
 export const unitHandlers = {
   createStructuralUnit,
   getStructuralUnits,
+  deleteStructuralUnit,
 };

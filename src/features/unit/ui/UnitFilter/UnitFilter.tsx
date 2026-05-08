@@ -27,7 +27,7 @@ export function UnitFilter({ value, onChange }: IUnitFilterProps) {
           <span
             className={`${styles.square} ${value === 'all' ? styles.squareActive : ''}`}
           />
-          Все
+          Активные
         </MenuItem>
         <MenuItem
           as='button'
