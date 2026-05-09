@@ -1,32 +1,29 @@
 .button {
-  text-align: center;
   font-weight: 700;
   cursor: pointer;
   transition:
     background-color 0.2s ease,
     border-color 0.2s ease,
     color 0.2s ease;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
 }
 
 .default {
-  background-color: var(--medium-blue);
-  color: var(--white);
+  background-color: var(--siniy-osnovnoy);
+  color: var(--belyy);
 }
 
 .default:hover {
-  background-color: var(--blue);
+  background-color: var(--siniy-osnovnoy);
 }
 
 .ghost {
-  background-color: var(--white);
-  color: var(--medium-blue);
-  border: 1px solid var(--medium-blue);
-}
-
-.ghost:hover {
-  background-color: var(--light-blue);
-  border-color: var(--blue);
-  color: var(--blue);
+  background-color: var(--belyy);
+  color: var(--siniy-osnovnoy);
 }
 
 .l {
@@ -41,4 +38,7 @@
 .s {
   padding: 8px 15px;
   border-radius: 5px;
+
+  font-weight: 700;
+  font-size: var(--font-text-main);
 }

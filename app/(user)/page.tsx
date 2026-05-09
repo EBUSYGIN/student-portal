@@ -1,5 +1,4 @@
 import { Card, Title } from '@/shared';
-import { QueryProvider } from '@/app/Providers/QueryProvider';
 
 import styles from './page.module.css';
 import { UserInfo } from '@/widgets';
@@ -12,9 +11,7 @@ export default function UserPage() {
           Профиль
         </Title>
       </Card>
-      <QueryProvider>
-        <UserInfo />
-      </QueryProvider>
+      <UserInfo />
     </div>
   );
 }

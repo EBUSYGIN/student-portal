@@ -1,20 +1,18 @@
 :root {
   /*colors*/
-  --black: #000;
-  --white: #fff;
-  --blue: #1652a8;
-  --medium-blue: #296fe5;
-  --background-blue: #6a9bed;
-  --light-blue: #b1cef8;
-
-  --beige: #f5eee4;
-  --crimson: #3f081b;
-  --light-green: #bef4d1;
-  --dark-green: #285237;
-  --yellow: #fbecbb;
-  --dark-yellow: #4d421e;
-  --red: #ff9f8e;
-  --dark-gray: #666;
+  --belyy: #fff;
+  --goluboy-dlya-obvodok: #b1cef8;
+  --chernyy: #000;
+  --siniy-osnovnoy: #296fe5;
+  --temno-seryy: #666;
+  --zelenyy: #bef4d1;
+  --temno-zelenyy: #285237;
+  --zheltyy: #fbecbb;
+  --temno-zheltyy: #4d421e;
+  --krasnyy: #ff9f8e;
+  --temno-krasnyy: #3a1812;
+  --goluboy-dlya-fona: #8db5f3;
+  --siniy-dlya-fona: #6a9bed;
 
   /*font-sizes*/
   --font-h1: 36px;

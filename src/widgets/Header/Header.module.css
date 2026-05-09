@@ -5,8 +5,17 @@
   gap: 10px;
   align-items: baseline;
 
-  background-color: var(--medium-blue);
-  color: var(--white);
+  background-color: var(--siniy-osnovnoy);
+  color: var(--belyy);
 
   margin-bottom: 50px;
+}
+
+.navigation {
+  margin-left: auto;
+  display: flex;
+  gap: 60px;
+
+  font-weight: 600;
+  font-size: var(--font-text-big);
 }

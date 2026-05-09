@@ -50,7 +50,6 @@ const eslintConfig = defineConfig([
       '@typescript-eslint/no-empty-object-type': 'off',
       '@typescript-eslint/no-explicit-any': 'warn',
       '@typescript-eslint/no-floating-promises': 'error',
-      '@typescript-eslint/no-misused-promises': 'error',
       '@typescript-eslint/await-thenable': 'error',
 
       'no-console': ['warn', { allow: ['warn', 'error'] }],

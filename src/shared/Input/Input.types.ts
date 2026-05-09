@@ -8,4 +8,5 @@ export interface IInputTypes extends DetailedHTMLProps<
   error?: string;
   label?: string;
   icon?: IconType;
+  appearance?: 'default' | 'search';
 }

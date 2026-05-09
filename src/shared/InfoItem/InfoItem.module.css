@@ -2,7 +2,7 @@
   width: 100%;
   padding: 5px 10px;
 
-  border-bottom: 2px solid var(--light-blue);
+  border-bottom: 2px solid var(--goluboy-dlya-obvodok);
   display: grid;
   grid-template-columns: auto minmax(0, 1fr);
   align-items: center;
@@ -12,7 +12,7 @@
 .label {
   font-weight: 500;
   font-size: var(--font-text-main);
-  color: var(--dark-gray);
+  color: var(--temno-seryy);
   min-width: 250px;
 }
 

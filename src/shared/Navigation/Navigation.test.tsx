@@ -66,4 +66,26 @@ describe('Navigation', () => {
     expect(activeLink.className).toContain('active');
     expect(inactiveLink.className).not.toContain('active');
   });
+
+  it('marks parent route as active for nested paths', () => {
+    usePathnameMock.mockReturnValue('/admin/management/structural-units/details');
+
+    render(
+      <Navigation
+        navigationItems={[
+          {
+            name: 'Structural units',
+            href: '/admin/management/structural-units',
+          },
+          { name: 'Groups', href: '/admin/management/groups' },
+        ]}
+      />,
+    );
+
+    const activeLink = screen.getByRole('link', { name: 'Structural units' });
+    const inactiveLink = screen.getByRole('link', { name: 'Groups' });
+
+    expect(activeLink.className).toContain('active');
+    expect(inactiveLink.className).not.toContain('active');
+  });
 });

@@ -5,7 +5,7 @@ import { useAnyInfo } from '@/assets/lib/hooks/useAnyInfo';
 import { IUserResponse } from '@/entities/user/model';
 import { userRequests } from '@/entities/user/handlers';
 import { PersonalInfoBlock, ParentsBlock } from '@/entities/user/ui';
-import { AddParentForm } from '@/features/User';
+import { AddParentForm } from '@/features/user';
 import { Loader } from '@/shared';
 
 export function UserInfo() {

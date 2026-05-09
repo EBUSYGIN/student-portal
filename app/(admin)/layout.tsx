@@ -1,11 +1,16 @@
-import { AdminNavigationConfig } from '@/features/Admin';
-import { MainContainer, Navigation } from '@/shared';
+import { AdminHeaderNavigation } from '@/features/admin/config/navigation.config';
+import { QueryProvider } from '@/app/Providers/QueryProvider';
+import { Header } from '@/widgets';
+
+import styles from './layout.module.css';
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <div>
-      <Navigation navigationItems={AdminNavigationConfig} />
-      <MainContainer>{children}</MainContainer>
-    </div>
+    <QueryProvider>
+      <div>
+        <Header navigationConfig={AdminHeaderNavigation} />
+        <div className={styles.content}>{children}</div>
+      </div>
+    </QueryProvider>
   );
 }
