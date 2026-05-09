@@ -8,6 +8,7 @@ export function StructuralUnit({
   unit,
   isDeleted = false,
   refetchUnits,
+  onEdit,
 }: IStructuralUnitProps) {
   const onDelete = async () => {
     await unitHandlers.deleteStructuralUnit(unit);
@@ -21,7 +22,12 @@ export function StructuralUnit({
         {isDeleted ? 'Удалено' : 'Активно'}
       </StatusTag>
       <div className={styles.actions}>
-        <Button size={'s'} icon='Edit' appearance='ghost' />
+        <Button
+          size={'s'}
+          icon='Edit'
+          appearance='ghost'
+          onClick={() => onEdit(unit)}
+        />
         <Button size='s' icon='Trash' appearance='ghost' onClick={onDelete} />
       </div>
     </li>

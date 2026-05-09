@@ -14,6 +14,7 @@ export const UnitClientEndpoints = {
   },
 
   deleteStructuralUnit: () => `/api/admin/organization/structural-unit/delete`,
+  editStructuralUnit: () => `/api/admin/organization/structural-unit/edit/`,
 };
 
 export const UnitServerEndpoints = {
@@ -22,5 +23,7 @@ export const UnitServerEndpoints = {
   getStructuralUnits: (organizationId: string, deleted?: 'deleted') =>
     `${API_URL}/organizations/${organizationId}/structural_units${deleted ? '/deleted' : ''}/`,
   deleteStructuralUnit: (organizationId: string, id: string) =>
+    `${API_URL}/organizations/${organizationId}/structural_units/${id}/`,
+  editStructuralUnit: (organizationId: string, id: string) =>
     `${API_URL}/organizations/${organizationId}/structural_units/${id}/`,
 };
