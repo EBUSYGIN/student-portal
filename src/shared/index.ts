@@ -9,3 +9,4 @@ export { InfoItem } from './InfoItem/InfoItem';
 export { Loader } from './Loader/Loader';
 export { Navigation } from './Navigation/Navigation';
 export { Modal } from './Modal/Modal';
+export { StatusFilter } from './StatusFilter/StatusFilter';

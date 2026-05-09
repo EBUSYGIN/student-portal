@@ -2,16 +2,10 @@ import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react';
 
 import { Icon } from '@/shared';
 
-import styles from './UnitFilter.module.css';
+import { IStatusFilterProps } from './StatusFilter.types';
+import styles from './StatusFilter.module.css';
 
-export type UnitStatusFilter = 'all' | 'deleted';
-
-interface IUnitFilterProps {
-  value: UnitStatusFilter;
-  onChange: (value: UnitStatusFilter) => void;
-}
-
-export function UnitFilter({ value, onChange }: IUnitFilterProps) {
+export function StatusFilter({ isActive, onToggle }: IStatusFilterProps) {
   return (
     <Menu>
       <MenuButton className={styles.dropDownButton}>
@@ -22,22 +16,22 @@ export function UnitFilter({ value, onChange }: IUnitFilterProps) {
         <MenuItem
           as='button'
           className={styles.menuButton}
-          onClick={() => onChange('all')}
+          onClick={() => onToggle(true)}
         >
           <span
-            className={`${styles.square} ${value === 'all' ? styles.squareActive : ''}`}
+            className={`${styles.square} ${isActive ? styles.squareActive : ''}`}
           />
           Активные
         </MenuItem>
         <MenuItem
           as='button'
           className={styles.menuButton}
-          onClick={() => onChange('deleted')}
+          onClick={() => onToggle(false)}
         >
           <span
-            className={`${styles.square} ${value === 'deleted' ? styles.squareActive : ''}`}
+            className={`${styles.square} ${!isActive ? styles.squareActive : ''}`}
           />
-          Удалено
+          Удаленные
         </MenuItem>
       </MenuItems>
     </Menu>
