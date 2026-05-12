@@ -1,0 +1,31 @@
+.list {
+  --profession-columns: minmax(0, 0.75fr) minmax(0, 1.45fr) minmax(120px, 0.95fr)
+    minmax(88px, 0.5fr) minmax(130px, 0.75fr) minmax(72px, 0.4fr);
+
+  width: 100%;
+  display: grid;
+  grid-template-columns: var(--profession-columns);
+  column-gap: 12px;
+  align-items: center;
+  overflow: hidden;
+
+  border: 2px solid var(--goluboy-dlya-obvodok);
+  border-radius: 25px;
+}
+
+.listHead {
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-column: 1 / -1;
+  align-items: center;
+  background: rgba(141, 181, 243, 0.3);
+  padding: 10px 42px;
+
+  font-weight: 700;
+  font-size: var(--font-text-main);
+}
+
+.listHead > span {
+  justify-self: center;
+  text-align: center;
+}
