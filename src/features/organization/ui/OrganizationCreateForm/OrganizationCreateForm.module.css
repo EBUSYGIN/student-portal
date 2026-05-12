@@ -1,0 +1,27 @@
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.formError {
+  margin-top: 8px;
+  color: #d63a3a;
+  font-size: 14px;
+}
+
+.infoWrapper {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+
+.infoIcon {
+  width: 30px;
+  height: 30px;
+  flex: 0 0 30px;
+}
+
+.infoText {
+  color: var(--temno-seryy);
+  font-weight: 700;
+}

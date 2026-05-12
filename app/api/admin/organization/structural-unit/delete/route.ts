@@ -4,12 +4,9 @@ import { safeParse } from '@/assets/lib/http/safeParse';
 
 export async function DELETE(request: Request) {
   try {
-    const body = (await request.json()) as {
-      organizationId: string;
-      id: string;
-    };
-    const organizationId = body.organizationId;
-    const id = body.id;
+    const { searchParams } = new URL(request.url);
+    const organizationId = searchParams.get('organizationId');
+    const id = searchParams.get('id');
 
     if (!organizationId || !id) {
       return NextResponse.json(

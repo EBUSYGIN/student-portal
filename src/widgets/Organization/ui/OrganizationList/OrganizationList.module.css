@@ -1,0 +1,51 @@
+.list {
+  --organization-columns: minmax(0, 1.8fr) minmax(160px, 0.8fr) auto;
+
+  width: 100%;
+  display: grid;
+  grid-template-columns: var(--organization-columns);
+  column-gap: 12px;
+  align-items: center;
+  overflow: hidden;
+
+  border: 2px solid var(--goluboy-dlya-obvodok);
+  border-radius: 25px;
+}
+
+.listHead {
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-column: 1 / -1;
+  align-items: center;
+  background: rgba(141, 181, 243, 0.3);
+  padding: 10px 42px;
+
+  font-weight: 700;
+  font-size: var(--font-text-main);
+}
+
+.listHead > span:first-child {
+  justify-self: center;
+  text-align: center;
+}
+
+.listHead > span:nth-child(2) {
+  justify-self: center;
+}
+
+.listHead > span:last-child {
+  justify-self: center;
+  text-align: center;
+}
+
+.filterActions {
+  margin-bottom: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.filterActionsRight {
+  display: flex;
+  gap: 20px;
+}

@@ -6,11 +6,11 @@ export interface IUserResponse {
   first_name: string;
   middle_name: string;
   birthday_date: string;
-  organization: IOrganization;
+  organization: IEducationInfo;
   parents?: IParent[];
 }
 
-export interface IOrganization {
+export interface IEducationInfo {
   name: string;
   speciality: string;
   course: number;
