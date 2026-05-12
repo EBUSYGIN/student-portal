@@ -6,24 +6,25 @@ import { unitHandlers } from '@/entities/unit/handlers';
 import { useAnyInfo } from '@/assets/lib/hooks/useAnyInfo';
 import { StructuralUnit } from '@/entities/unit';
 import { IStructuralUnit } from '@/entities/unit/model';
+import { StatusFilter } from '@/shared';
 
-import { UnitCreationForm, UnitFilter } from '@/features/unit';
-import { UnitStatusFilter } from '@/features/unit';
+import { UnitCreationForm } from '@/features/unit';
 import { UnitEditForm } from '@/features/unit';
 
 import styles from './StructuralUnitList.module.css';
 
 export function StructuralUnitList() {
-  const [statusFilter, setStatusFilter] = useState<UnitStatusFilter>('all');
+  const [isActiveFilter, setIsActiveFilter] = useState(true);
   const [editingUnit, setEditingUnit] = useState<IStructuralUnit | null>(null);
   const organizationId = '6f042136-7c57-4572-b801-4c73176f01ab';
+  const statusFilter = isActiveFilter ? 'active' : 'deleted';
 
   const { data: structuralUnits = [], refetch } = useAnyInfo(
     `structuralUnits-${statusFilter}`,
     () =>
       unitHandlers.getStructuralUnits(
         organizationId,
-        statusFilter === 'deleted' ? 'deleted' : undefined,
+        isActiveFilter ? undefined : 'deleted',
       ),
   );
 
@@ -36,7 +37,7 @@ export function StructuralUnitList() {
             organizationId={organizationId}
             refetchUnits={refetch}
           />
-          <UnitFilter value={statusFilter} onChange={setStatusFilter} />
+          <StatusFilter isActive={isActiveFilter} onToggle={setIsActiveFilter} />
         </div>
       </div>
       <ul className={styles.list}>
@@ -49,7 +50,7 @@ export function StructuralUnitList() {
           <StructuralUnit
             key={unit.id}
             unit={unit}
-            isDeleted={statusFilter === 'deleted'}
+            isDeleted={!isActiveFilter}
             refetchUnits={refetch}
             onEdit={setEditingUnit}
           />

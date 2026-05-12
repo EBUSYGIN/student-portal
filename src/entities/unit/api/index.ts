@@ -13,7 +13,10 @@ export const UnitClientEndpoints = {
     return `/api/admin/organization/structural-unit?${params.toString()}`;
   },
 
-  deleteStructuralUnit: () => `/api/admin/organization/structural-unit/delete`,
+  deleteStructuralUnit: (organizationId: string, id: string) => {
+    const params = new URLSearchParams({ organizationId, id });
+    return `/api/admin/organization/structural-unit/delete?${params.toString()}`;
+  },
   editStructuralUnit: () => `/api/admin/organization/structural-unit/edit/`,
 };
 
