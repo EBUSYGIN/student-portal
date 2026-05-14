@@ -15,6 +15,7 @@ export const ClientProfessionEndpoints = {
     const params = new URLSearchParams({ organizationId, id });
     return `/api/admin/organization/profession/delete?${params.toString()}`;
   },
+  editProfession: () => '/api/admin/organization/profession/edit/',
 };
 
 export const ServerProfessionEndpoints = {
@@ -23,5 +24,7 @@ export const ServerProfessionEndpoints = {
   createProfession: (organizationId: string) =>
     `${API_URL}/organizations/${organizationId}/specialities/`,
   deleteProfession: (organizationId: string, id: string) =>
+    `${API_URL}/organizations/${organizationId}/specialities/${id}/`,
+  editProfession: (organizationId: string, id: string) =>
     `${API_URL}/organizations/${organizationId}/specialities/${id}/`,
 };
