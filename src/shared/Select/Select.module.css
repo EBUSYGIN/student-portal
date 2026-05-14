@@ -1,0 +1,38 @@
+.selectBox {
+  width: 100%;
+  padding-bottom: 25px;
+  max-width: 700px;
+}
+
+.label {
+  font-weight: 700;
+  font-size: var(--font-text-main);
+}
+
+.selectWrapper {
+  position: relative;
+  width: 100%;
+}
+
+.select {
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 10px;
+  border: 2px solid var(--goluboy-dlya-obvodok);
+  color: var(--chernyy);
+  padding: 14px 20px;
+  font-size: var(--font-text-main);
+  font-weight: 600;
+  background: var(--belyy);
+}
+
+.select:focus {
+  outline: 2px solid var(--siniy-osnovnoy);
+  outline-offset: 0;
+}
+
+.error {
+  color: var(--krasnyy);
+  font-size: 14px;
+  margin-top: 8px;
+}

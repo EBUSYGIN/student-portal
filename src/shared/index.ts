@@ -1,6 +1,7 @@
 export { Button } from './Button/Button';
 export { Icon } from './Icon/Icon';
 export { Input } from './Input/Input';
+export { Select } from './Select/Select';
 export { StatusTag } from './StatusTag/StatusTag';
 export { MainContainer } from './MainContainer/MainContainer';
 export { Card } from './Card/Card';

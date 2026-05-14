@@ -23,7 +23,10 @@ export function Profession({
         {profession.type === 'specialty' ? 'Специальность' : 'Профессия'}
       </span>
       <span>{profession.semesters_number}</span>
-      <StatusTag status={isDeleted ? 'error' : 'success'}>
+      <StatusTag
+        className={styles.status}
+        status={isDeleted ? 'error' : 'success'}
+      >
         {isDeleted ? 'Удалено' : 'Активно'}
       </StatusTag>
       <div className={styles.actions}>

@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { ProfessionServerEndpoints } from '@/entities/profession/api';
+import { ServerProfessionEndpoints } from '@/entities/profession/api';
 import { safeParse } from '@/assets/lib/http/safeParse';
 
 export async function DELETE(request: Request) {
@@ -16,7 +16,7 @@ export async function DELETE(request: Request) {
     }
 
     const backendResponse = await fetch(
-      ProfessionServerEndpoints.deleteProfession(organizationId, id),
+      ServerProfessionEndpoints.deleteProfession(organizationId, id),
       {
         method: 'DELETE',
         headers: {

@@ -1,6 +1,19 @@
+.filterActions {
+  margin-bottom: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.filterActionsRight {
+  display: flex;
+  gap: 20px;
+}
+
 .list {
-  --profession-columns: minmax(0, 0.75fr) minmax(0, 1.45fr) minmax(120px, 0.95fr)
-    minmax(88px, 0.5fr) minmax(130px, 0.75fr) minmax(72px, 0.4fr);
+  --profession-columns: minmax(0, 0.75fr) minmax(0, 1.45fr)
+    minmax(120px, 0.95fr) minmax(88px, 0.5fr) minmax(130px, 0.75fr)
+    minmax(72px, 0.4fr);
 
   width: 100%;
   display: grid;

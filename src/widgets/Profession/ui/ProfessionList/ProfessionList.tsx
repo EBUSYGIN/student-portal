@@ -1,17 +1,44 @@
 'use client';
 
+import { useState } from 'react';
+
 import { Profession } from '@/entities/profession';
-import { IProfession } from '@/entities/profession/model';
+import { useAnyInfo } from '@/assets/lib/hooks/useAnyInfo';
+import { professionHandlers } from '@/entities/profession/handlers';
+import { ProfessionCreationForm } from '@/features/profession';
+import { StatusFilter } from '@/shared';
 
 import styles from './ProfessionList.module.css';
 
-export interface IProfessionListProps {
-  professions: IProfession[];
-}
+export function ProfessionList() {
+  const [isActiveFilter, setIsActiveFilter] = useState(true);
+  const organizationId = '8da9058f-ba16-4de3-8861-7cf67eb8ea2c';
+  const statusFilter = isActiveFilter ? 'active' : 'deleted';
 
-export function ProfessionList({ professions }: IProfessionListProps) {
+  const { data: professions = [], refetch } = useAnyInfo(
+    `professions-${organizationId}-${statusFilter}`,
+    () =>
+      professionHandlers.getProfessions(
+        organizationId,
+        isActiveFilter ? undefined : 'deleted',
+      ),
+  );
+
   return (
-    <ul className={styles.list}>
+    <>
+      <div className={styles.filterActions}>
+        <div className={styles.filterActionsRight}>
+          <ProfessionCreationForm
+            organizationId={organizationId}
+            refetchProfessions={refetch}
+          />
+          <StatusFilter
+            isActive={isActiveFilter}
+            onToggle={setIsActiveFilter}
+          />
+        </div>
+      </div>
+      <ul className={styles.list}>
       <div className={styles.listHead}>
         <span>Код</span>
         <span>Наименование</span>
@@ -24,10 +51,12 @@ export function ProfessionList({ professions }: IProfessionListProps) {
         <Profession
           key={profession.id}
           profession={profession}
+          isDeleted={!isActiveFilter}
           onEdit={() => {}}
-          refetchProfessions={async () => {}}
+          refetchProfessions={refetch}
         />
       ))}
     </ul>
+    </>
   );
 }
