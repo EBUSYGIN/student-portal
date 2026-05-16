@@ -1,0 +1,27 @@
+.profession {
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-column: 1 / -1;
+  align-items: center;
+  padding: 10px 42px;
+  border-top: 2px solid var(--goluboy-dlya-obvodok);
+  text-align: center;
+}
+
+.profession > span {
+  justify-self: center;
+  text-align: center;
+  font-weight: 600;
+  font-size: var(--font-text-main);
+}
+
+.status {
+  justify-self: center;
+}
+
+.actions {
+  display: flex;
+  justify-self: center;
+  justify-content: center;
+  gap: 8px;
+}

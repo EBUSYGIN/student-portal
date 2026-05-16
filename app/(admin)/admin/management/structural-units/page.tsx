@@ -1,5 +1,5 @@
-import { Card, Title } from '@/shared';
 import { StructuralUnitList } from '@/widgets/StructuralUnit';
+import { Card, Title } from '@/shared';
 
 export default function ManagementPage() {
   return (

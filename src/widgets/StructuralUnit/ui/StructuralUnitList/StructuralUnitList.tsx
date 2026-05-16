@@ -16,7 +16,7 @@ import styles from './StructuralUnitList.module.css';
 export function StructuralUnitList() {
   const [isActiveFilter, setIsActiveFilter] = useState(true);
   const [editingUnit, setEditingUnit] = useState<IStructuralUnit | null>(null);
-  const organizationId = '6f042136-7c57-4572-b801-4c73176f01ab';
+  const organizationId = '8da9058f-ba16-4de3-8861-7cf67eb8ea2c';
   const statusFilter = isActiveFilter ? 'active' : 'deleted';
 
   const { data: structuralUnits = [], refetch } = useAnyInfo(
@@ -37,7 +37,10 @@ export function StructuralUnitList() {
             organizationId={organizationId}
             refetchUnits={refetch}
           />
-          <StatusFilter isActive={isActiveFilter} onToggle={setIsActiveFilter} />
+          <StatusFilter
+            isActive={isActiveFilter}
+            onToggle={setIsActiveFilter}
+          />
         </div>
       </div>
       <ul className={styles.list}>
