@@ -34,9 +34,16 @@ export function Profession({
           size={'s'}
           icon='Edit'
           appearance='ghost'
+          disabled={isDeleted}
           onClick={() => onEdit(profession)}
         />
-        <Button size='s' icon='Trash' appearance='ghost' onClick={onDelete} />
+        <Button
+          size='s'
+          icon='Trash'
+          appearance='ghost'
+          disabled={isDeleted}
+          onClick={onDelete}
+        />
       </div>
     </li>
   );

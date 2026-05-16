@@ -42,3 +42,8 @@
   font-weight: 700;
   font-size: var(--font-text-main);
 }
+
+.button:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+}

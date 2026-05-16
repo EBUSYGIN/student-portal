@@ -26,9 +26,16 @@ export function StructuralUnit({
           size={'s'}
           icon='Edit'
           appearance='ghost'
+          disabled={isDeleted}
           onClick={() => onEdit(unit)}
         />
-        <Button size='s' icon='Trash' appearance='ghost' onClick={onDelete} />
+        <Button
+          size='s'
+          icon='Trash'
+          appearance='ghost'
+          disabled={isDeleted}
+          onClick={onDelete}
+        />
       </div>
     </li>
   );
