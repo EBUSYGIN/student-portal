@@ -1,0 +1,21 @@
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.infoWrapper {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+
+.infoIcon {
+  width: 30px;
+  height: 30px;
+  flex: 0 0 30px;
+}
+
+.infoText {
+  color: var(--temno-seryy);
+  font-weight: 700;
+}
