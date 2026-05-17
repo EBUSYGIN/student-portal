@@ -1,0 +1,19 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.infoWrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.infoIcon {
+  flex-shrink: 0;
+}
+
+.infoText {
+  font-size: var(--font-text-main);
+}
